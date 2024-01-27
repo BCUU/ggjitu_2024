@@ -13,7 +13,23 @@ public class ObjectsFader : MonoBehaviour
         Mat = GetComponent<Renderer>().material;
         originalOpacity = Mat.color.a;
     }
-    
+
+
+/// <summary>
+/// OnTriggerEnter is called when the Collider other enters the trigger.
+/// </summary>
+/// <param name="other">The other Collider involved in this collision.</param>
+private void OnTriggerEnter(Collider other)
+{
+    if(other.gameObject.CompareTag("Enemys")){
+            papaAngle papaAngle=other.GetComponent<papaAngle>();
+            papaAngle.hedef=null;
+        }
+}
+private void OnCollisionEnter(Collision other)
+{
+     
+}    
     private void Update()
     {
         if(doFade){
