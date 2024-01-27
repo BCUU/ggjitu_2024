@@ -1,0 +1,8 @@
+Model Information:
+* title:	Air horn
+* source:	https://sketchfab.com/3d-models/air-horn-efbb9010cedc4ecf8650ecc9408a335d
+* author:	AivisAstics (https://sketchfab.com/AivisAstics)
+
+Model License:
+* license type:	Standard (https://sketchfab.com/licenses)
+* requirements:	see https://sketchfab.com/licenses

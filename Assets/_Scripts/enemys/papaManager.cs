@@ -65,6 +65,8 @@ public class papaManager : MonoBehaviour
 
             // Durma süresi boyunca hareket et
             yield return new WaitForSeconds(lookDuration);
+            xRadius = Random.Range(1f, 10f);  // You can adjust the range based on your needs
+            yRadius = Random.Range(1f, 10f);
 
             // Dur ve rastgele bir yöne yavaşça bak
             isMoving = false;

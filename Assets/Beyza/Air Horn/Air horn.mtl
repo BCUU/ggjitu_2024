@@ -1,0 +1,28 @@
+# Material Count: 3
+newmtl bulb_Mat
+map_Ke images/air_horn_bulb_Mat_Diffuse.png
+map_Bump images/air_horn_bulb_Mat_Normal.png
+map_Kd images/air_horn_bulb_Mat_Diffuse.png
+Ns 1
+map_Ns images/air_horn_bulb_Mat_Glossiness.png
+map_Ks images/air_horn_bulb_Mat_Specular.png
+illum 3
+
+newmtl ring_Mat
+map_Ke images/air_horn_ring_Mat_Diffuse.png
+map_Bump images/air_horn_ring_Mat_Normal.png
+map_Kd images/air_horn_ring_Mat_Diffuse.png
+Ns 1
+map_Ns images/air_horn_ring_Mat_Glossiness.png
+map_Ks images/air_horn_ring_Mat_Specular.png
+illum 3
+
+newmtl tube_Mat
+map_Ke images/air_horn_tube_Mat_Diffuse.png
+map_Bump images/air_horn_tube_Mat_Normal.png
+map_Kd images/air_horn_tube_Mat_Diffuse.png
+Ns 1
+map_Ns images/air_horn_tube_Mat_Glossiness.png
+map_Ks images/air_horn_tube_Mat_Specular.png
+illum 3
+
