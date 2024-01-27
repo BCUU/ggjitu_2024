@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ggjitu.sln"
+    "dotnet.defaultSolution": "ggjitu_2024.sln"
 }

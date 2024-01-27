@@ -18,7 +18,7 @@ public class FadeCam : MonoBehaviour
             }
             
             if(hit.collider.gameObject==player){
-                Debug.Log("player degdi");
+                //Debug.Log("player degdi");
                 if(_fader!=null){
                     _fader.doFade=false;
                 }

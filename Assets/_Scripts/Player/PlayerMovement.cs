@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  public float hareketHizi = 5f;
+    public float hareketHizi = 5f;
     public float rotateHizi = 180f;
 
     private Rigidbody rb;
