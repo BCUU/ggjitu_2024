@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/introscane.unity
+    guid: 5bb3a153a47cb1f43bd21bae67181158
+  - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: c0c27a2aab17cbb4fb7820173c6b702f
   - enabled: 1
     path: Assets/Scenes/MainScane.unity
     guid: c975e4fff2eca05478a5cc5cfb46e12e
+  - enabled: 1
+    path: Assets/Scenes/winScane.unity
+    guid: 6ff78092c513c4b438de36ed2d769a23
   m_configObjects: {}

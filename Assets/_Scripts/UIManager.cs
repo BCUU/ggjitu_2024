@@ -7,7 +7,16 @@ public class UIManager : MonoBehaviour
 {
      public void SonrakiSahneyeGec()
     {
-        
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
+    }
+    public void ExıtGame(){
+        Application.Quit();
+    }
+    public void RestartGame(){
+        SceneManager.LoadScene(2);
+    }
+    
+    public void videoscanecontroller(){
+
     }
 }

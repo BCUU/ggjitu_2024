@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.XR.WSA;
+using UnityEngine.UI;
+
 
 public class papaAngle : MonoBehaviour
 {
+    public GameObject panell;
     public float algilamaMesafesi = 10f;
     public float hareketHizi = 5f;
     public Transform hedef;
@@ -15,6 +18,14 @@ public class papaAngle : MonoBehaviour
     void Start(){
         navMeshAgent=gameObject.GetComponent<NavMeshAgent>();
         MoveToRandomDestination();
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Player")){
+            //Time.timeScale=0f;
+            panell.SetActive(true);
+
+        }
     }
     void Update()
     {
