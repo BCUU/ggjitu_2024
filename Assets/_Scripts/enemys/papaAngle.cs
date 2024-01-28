@@ -31,7 +31,7 @@ public class papaAngle : MonoBehaviour
 
         if (Physics.Raycast(rayBaslangicNoktasi, rayYonu, out hit, algilamaMesafesi))
         {
-            Debug.Log("Çarpışan Nesne: " + hit.collider.gameObject.name);
+            //Debug.Log("Çarpışan Nesne: " + hit.collider.gameObject.name);
             // Işın bir nesneye çarptı, çarptığı nesnenin etiketini kontrol et
             if (hit.collider.CompareTag("Player"))
             {
@@ -39,6 +39,7 @@ public class papaAngle : MonoBehaviour
                 hedef = hit.collider.transform;
                 Debug.Log("Oyuncu görüldü!");
                 spotlight.GetComponent<Light>().color = red1;
+                navMeshAgent.speed=6f;
             }
         }
 
@@ -59,6 +60,7 @@ public class papaAngle : MonoBehaviour
         }
         else{
             spotlight.GetComponent<Light>().color=green;
+            navMeshAgent.speed=3.5f;
         }
 
         // Çizgiyi ekranda sürekli göstermek için kullanılır.

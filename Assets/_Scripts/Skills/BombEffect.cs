@@ -13,13 +13,20 @@ public class BombEffect : MonoBehaviour
     public bool isWait=false;
     void Start()
     {
-        sphereCollider = GetComponent<SphereCollider>();
+        sphereCollider = gameObject.GetComponent<SphereCollider>();
         rb= GetComponent<Rigidbody>();
     }
-    private void OnCollisionEnter(Collision collision)
+   private void OnCollisionEnter(Collision collision)
     {
+         if(collision.gameObject.CompareTag("NPC")){
+           NPC nPC= collision.gameObject.GetComponent<NPC>();
+           nPC.Tickled();
+           nPC.addpoint();
+           Debug.Log("degdi");
+        }
         if(collision.gameObject.CompareTag("Ground")||collision.gameObject.CompareTag("Enemys")){
             StartCoroutine(waitForBouncy(delay));
+            
             if(isWait){
                 Rigidbody otherRb = collision.gameObject.GetComponent<Rigidbody>();
                 
@@ -37,19 +44,23 @@ public class BombEffect : MonoBehaviour
         }
         else{
              StartCoroutine(waitForDestroy());
+       
         }
+        
+       
+    
     }
-
+    
     IEnumerator waitForBouncy(float delay){
          yield return new WaitForSeconds(delay);
          sphereCollider.radius = targetExplosionRadius;
          isWait=true;
          Vector3 hareket = transform.forward  * Time.deltaTime;
-        rb.MovePosition(rb.position + hareket);
+         rb.MovePosition(rb.position + hareket);
          StartCoroutine(waitForDestroy());
     }
      IEnumerator waitForDestroy(){
-         yield return new WaitForSeconds(5f);
+         yield return new WaitForSeconds(7f);
          Destroy(gameObject);
          
     }

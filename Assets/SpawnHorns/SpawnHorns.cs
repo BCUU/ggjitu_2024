@@ -91,7 +91,7 @@ public class SpawnHorns : MonoBehaviour
                         if (!hornList[k].activeSelf)
                         {
                             beginning = k;
-                            Debug.Log("beginning:" + beginning);
+                           // Debug.Log("beginning:" + beginning);
                             break;
                         }
                     }

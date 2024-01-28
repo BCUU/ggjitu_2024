@@ -44,6 +44,7 @@ public class NPCInteraction : MonoBehaviour
         }
         
     }
+    
 
     private void OnTriggerExit(Collider other)
     {

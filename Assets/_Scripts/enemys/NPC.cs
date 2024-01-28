@@ -7,6 +7,7 @@ public class NPC : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] AudioClip[] laughs;
+    [SerializeField]  GameObject levelProgress;
 
 
     private AudioSource audioSource;
@@ -16,10 +17,11 @@ public class NPC : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void addpoint()
     {
-        
+        levelProgress.GetComponent<LevelProgress>().IncreaseProgressValue();
     }
+    
 
     public void Tickled()
     {
