@@ -7,11 +7,11 @@ public class papaManager : MonoBehaviour
     public float speed = 5f;
     public float xRadius = 5f;
     public float yRadius = 3f;
-    public float lookInterval = 2f; // Durma süresi
-    public float lookDuration = 1f; // Bakma süresi
-    public float lookSpeed = 2f; // Bakma hızı
-    public float centeringSpeed = 2f; // Merkeze odaklanma hızı
-    public Transform centerObject; // Merkeze odaklanacak obje
+    public float lookInterval = 2f; 
+    public float lookDuration = 1f; 
+    public float lookSpeed = 2f; 
+    public float centeringSpeed = 2f; 
+    public Transform centerObject; 
 
     private Rigidbody rb;
     private float angle = 0f;
@@ -20,8 +20,6 @@ public class papaManager : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
-        // Eğer centerObject atanmamışsa, scripti bulunan GameObject'i kullan
         if (centerObject == null)
         {
             centerObject = transform;
@@ -32,10 +30,8 @@ public class papaManager : MonoBehaviour
 
     void Update()
     {
-        // Eğer hareket halindeyse, elips hareketini gerçekleştir
         if (isMoving)
         {
-            // Elips hareketi için parametrik denklem kullanarak konumu hesapla
             float x = xRadius * Mathf.Cos(angle);
             float z = yRadius * Mathf.Sin(angle);
 
